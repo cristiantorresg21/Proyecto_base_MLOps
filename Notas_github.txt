@@ -1,0 +1,17 @@
+-- Configuración actual de Git en tu entorno
+git config --list
+
+Tres niveles de configuración:
+* Sistema → Afecta a todos los usuarios del equipo.
+* Global → Afecta a tu usuario.
+* Local → Solo afecta al repositorio actual.
+
+git config --global user.email <you@example.com>
+git config --global user.name <YourName>
+--------------------------------------------------------------------------
+user.email=cristian.torres@cinvestav.mx
+user.name=Cristiantg21
+
+user.email=cristian.torres@cinvestav.mx
+user.name=cristiantorresg21
+----------------------------------------------------------------------------
