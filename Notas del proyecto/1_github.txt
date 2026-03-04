@@ -1,0 +1,35 @@
+-- Configuración actual de Git en tu entorno
+git config --list
+
+Tres niveles de configuración:
+* Sistema → Afecta a todos los usuarios del equipo.
+* Global → Afecta a tu usuario.
+* Local → Solo afecta al repositorio actual.
+
+git config --global user.email <you@example.com>
+git config --global user.name <YourName>
+--------------------------------------------------------------------------
+user.email=cristian.torres@cinvestav.mx
+user.name=Cristiantg21
+
+user.email=cristian.torres@cinvestav.mx
+user.name=cristiantorresg21
+----------------------------------------------------------------------------
+* Si los dos repos (local y remoto) están vacíos esta forma es útil
+git init
+git add .
+git commit -m “First comment"
+git branch -M main
+git remote add origin https://github.com/USER_NAME/PROJECT_NAME.git
+git push -u origin main
+
+* Si los dos repos (local y remoto) no están vacíos esta forma es útil
+git init
+git add .
+git commit -m “First comment"
+git branch -M main
+git remote add origin https://github.com/USER_NAME/PROJECT_NAME.git
+git pull origin main --rebase
+git push -u origin main
+
+

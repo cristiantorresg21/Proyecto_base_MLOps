@@ -1,0 +1,51 @@
+ML Production Ready (Fundamentos Sólidos)
+
+Objetivo:
+Que tu modelo funcione fuera de notebook y pueda desplegarse.
+
+Objetivos específicos:
+- Se entrene desde terminal.
+- Genere artefactos reproducibles.
+- Exponga un endpoint /predict.
+- Pase tests automáticamente.
+- Se pueda ejecutar dentro de Docker.
+- Si una falla → no está completo.
+
+Debe incluir:
+ml-project/
+│
+├── data/
+│   ├── raw/
+│   ├── preprocessed/
+│
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   ├── 03_model_experiments.ipynb
+│
+├── src/
+│   ├── data/
+│   ├── features/
+│   ├── models/
+│   ├── inference/
+│
+├── artifacts/
+│
+├── api/
+│
+├── tests/
+│
+├── configs/
+│
+├── Dockerfile
+├── requirements.txt
+└── .github/workflows/
+
+*****API
+- Donde simplemente:
+- Carga el modelo entrenado
+- Tiene un endpoint /predict
+- Devuelve la predicción
+
+Sin:
+- Autenticación, Base de datos. Monitoreo avanzado, Kubernetes, Solo lo básico.
