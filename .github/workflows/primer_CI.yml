@@ -1,0 +1,18 @@
+name: Primer CI
+
+on:
+  push:
+    paths:
+      - ".github/workflows/primer_CI.yml"
+
+jobs:
+  crear-docker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Probar version de docker
+        run: docker --versio 
+  
