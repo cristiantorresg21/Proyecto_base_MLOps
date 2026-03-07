@@ -1,0 +1,8 @@
+
+*** Organizar los imports
+# standard library
+# third-party
+# local
+
+*** Obtener el archivo de requerimientos:
+pip freeze > requirements.txt
