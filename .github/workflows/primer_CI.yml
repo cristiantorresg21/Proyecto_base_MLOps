@@ -15,9 +15,9 @@ jobs:
 
       - name: Probar version de docker
         run: docker --version 
-      
+ 
       - name: Montar imagen docker del entrenamiento
-        run: docker build -t container_train -f docker/train/Dockerfile
-      
+        run: docker build -t container_train -f docker/train/Dockerfile .
+
       - name: Correr container_train
         run: docker run container_train   
