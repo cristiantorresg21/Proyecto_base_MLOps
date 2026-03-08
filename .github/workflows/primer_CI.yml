@@ -16,11 +16,19 @@ jobs:
       - name: Probar version de docker
         run: docker --version 
  
-      - name: Montar contenedor del entrenamiento
+      - name: Crear contenedor de entrenamiento
         run: docker build -t container_train -f docker/train/Dockerfile .
 
-      - name: Correr container_train
+      - name: Ejecutar el contenedor container_train
         run: docker run container_train
-
+      
+      - name: Guargar artefactos en GitHub
+        uses: actions/upload-artifact@v4
+        with:
+          name: training-artifacts
+          path: |
+            models/
+            reports
+          
       - name: Finalizar
         run: echo "Contenedor finalizado"
