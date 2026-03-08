@@ -1,16 +1,15 @@
-FROM ubuntu
+FROM python:3.13-slim
 
-RUN apt-get update \
-&& apt-get install -y python3 python3-pip \
-&& useradd -m repl \
-&& rm -rf /var/lib/apt/lists/*
+RUN useradd -m repl
 
 WORKDIR /app
 
 COPY . .
 
-RUN pip3 install --upgrade pip \
-&& pip3 install -r requirements.txt
+RUN pip install --upgrade pip \
+&& pip install -r requirements.txt
+
+RUN chown -R repl:repl /app
 
 USER repl
 

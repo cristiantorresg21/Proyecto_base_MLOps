@@ -20,4 +20,7 @@ jobs:
         run: docker build -t container_train -f docker/train/Dockerfile .
 
       - name: Correr container_train
-        run: docker run container_train   
+        run: docker run container_train
+
+      - name: Finalizar
+        run: echo "Contenedor finalizado"
