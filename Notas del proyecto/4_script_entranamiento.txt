@@ -6,3 +6,21 @@
 
 *** Obtener el archivo de requerimientos:
 pip freeze > requirements.txt
+
+
+#como correr el pipeline
+Proyecto_base_MLOps/
+│
+├── examples/
+│   └── train_pipeline.py
+│
+├── src/
+│    └── configs/
+│        └── paths.py
+    
+python -m examples.train_pipeline --alpha 0.1
+
+
+** Para separar los archivos
+src: maneja logica - > se declaran funciones
+scrips: ejecucion -> se usa el entrypoint y luego 

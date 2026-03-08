@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import Ridge
 import joblib
 
-from paths import DATASET_PATH, MODEL_PATH, SCALER_PATH, METRICS_PATH
+from src.configs.paths import DATASET_PATH, MODEL_PATH, SCALER_PATH, METRICS_PATH
 
 parser = argparse.ArgumentParser(description='Modelo de regresión lineal con regularización Ridge')
 parser.add_argument('--alpha', '-a', default=0, type=float, help='El parametro alpha del modelo Ridge')
