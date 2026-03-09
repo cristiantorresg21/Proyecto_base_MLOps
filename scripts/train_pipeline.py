@@ -4,7 +4,8 @@ from src.data.load_data import load_data, split_data
 from src.preprocess.preprocess import preprocess, transform_scaler
 from src.models.train import train_model, save_model
 from src.evaluate.evaluate import eval_model, save_report
-from src.configs.paths import DATASET_PATH, MODEL_PATH, SCALER_PATH, METRICS_PATH
+from configs.paths import DATASET_PATH, MODEL_PATH, SCALER_PATH, METRICS_PATH
+from configs.configs import FEATURES
 
 parser = argparse.ArgumentParser(description='Modelo de regresión lineal con regularización Ridge')
 parser.add_argument('--alpha', '-a', default=0.0000001, type=float, help='El parametro alpha del modelo Ridge')
@@ -16,8 +17,8 @@ RANDOM_SEED = args.seed
 TEST_SPLIT = args.test_split
 
 def main():
-    df = load_data(path=DATASET_PATH)
-    X_train, X_test, y_train, y_test = split_data(data=df, seed_random=RANDOM_SEED, test_split=TEST_SPLIT)
+    X, y = load_data(path=DATASET_PATH, features=FEATURES)
+    X_train, X_test, y_train, y_test = split_data(X, y, seed_random=RANDOM_SEED, test_split=TEST_SPLIT)
     X_train, scaler = preprocess(X_train, path=SCALER_PATH)
     print("Datos de entranamiento: ", X_train.shape, y_train.shape)
     print("Datos de prueba: ", X_test.shape, y_test.shape)

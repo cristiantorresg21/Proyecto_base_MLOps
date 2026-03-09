@@ -4,7 +4,6 @@ from sklearn.linear_model import Ridge
 
 def eval_model(model, X, y):
     score = model.score(X,y)
-    print("El R2 es: ", score)
     return score
 
 def save_report(alpha, random_seed, R2, split_test, path):
