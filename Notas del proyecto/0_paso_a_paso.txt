@@ -1,0 +1,22 @@
+
+1. Primero hacer el EDA y hacer el notebook con los experimentos
+    Estos deben estan en la carpeta /notebooks y deben dependen de los 
+    datos de la carpeta /data
+
+3. Hacer los scripts de entrenamiento y prediccion usando funciones 
+    puras reutilizables, ademas de poder correrlos en terminal
+    Guardarlo en la carpeta /examples (Este paso no es necesario, pero ayuda)
+
+4. Los scripts anteriores ya deben generar las carpetas
+    /reports
+    /models
+    /artefacts
+
+4. Las funciones del scripts anterior separarlas en scripts especificos y 
+    ponerlos en la carpeta /src y los paths y configuraciones hacer scrips en la carpeta /configs
+
+5. Crear un nuevo script para entrenamiento y prediccion usando las funciones puras de src
+    guardandolos en la carpeta /scripts
+
+
+

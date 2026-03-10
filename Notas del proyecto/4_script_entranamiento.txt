@@ -23,4 +23,17 @@ python -m examples.train_pipeline --alpha 0.1
 
 ** Para separar los archivos
 src: maneja logica - > se declaran funciones
+    * Las funciones deben ser puras y solo deben tener una tarea
+        Por ejemplo, solo cargar datos y no se recomiendan prints 
+        ya que seria una segunda tarea el visualizar la informacion
 scrips: ejecucion -> se usa el entrypoint y luego 
+
+Principio de responsabilidad única (SRP)
+
+Viene de SOLID y lo popularizó Robert C. Martin.
+
+El principio dice:
+
+Una función debe tener una sola razón para cambiar.
+
+No significa que solo pueda tener una línea de código o una acción técnica.

@@ -10,6 +10,9 @@ DATA_DIR.mkdir(exist_ok=True)
 TEST_DATASET_DIR = DATA_DIR / "tests"
 TEST_DATASET_DIR.mkdir(exist_ok=True)
 
+TEST_DATA_API_DIR = DATA_DIR / "examples"
+TEST_DATA_API_DIR.mkdir(exist_ok=True)
+
 ARTIFACTS_DIR = BASE_DIR / "artifacts"
 ARTIFACTS_DIR.mkdir(exist_ok=True)
 
@@ -25,6 +28,9 @@ MODEL_PATH = MODELS_DIR / "model.pkl"
 SCALER_PATH = ARTIFACTS_DIR / "scaler.pkl"
 METRICS_PATH = REPORTS_DIR / "metrics.json"
 
+TEST_API_REQUEST_PATH = TEST_DATA_API_DIR / "api_request_example.json"
+TEST_RESPONSE_API_PATH = TEST_DATA_API_DIR / "api_response_example.json"
 # 
-
+   
+   
 
